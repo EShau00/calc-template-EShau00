@@ -1,7 +1,5 @@
 import re
 
-string = "5 + 2 / 4 * 4 - 2 + 6 / 53"
-
 def eval(string):
     '''
     MDAS:   Multiplication and Division
@@ -23,16 +21,12 @@ def eval(string):
             parsed.insert(operation_index-1, str(a - b))
 
     parsed = re.split("([\*/\+-])", string)
-    print(parsed)
     parsed = [entry.strip() for entry in parsed]
-    print(parsed)
 
     while len(parsed) != 1:
 
         # Performs multiplication and division operations
         while '*' in parsed or '/' in parsed:
-
-            print(parsed)
 
             # We can guarentee division exists
             if '*' not in parsed:
@@ -57,8 +51,6 @@ def eval(string):
         # Performs addition and subtraction operations
         while '+' in parsed or '-' in parsed:
 
-            print(parsed)
-
             # We can guarentee division exists
             if '+' not in parsed:
                 perform_operation(parsed, '-')
@@ -81,4 +73,12 @@ def eval(string):
 
     return(float(parsed.pop()))
 
-print(eval(string))
+def run():
+    print("Welcome to Eric and Alejandro's 4-function calculator!")
+    print("Enter \"quit\" to quit at any time.\n")
+    string = input("")
+    while string != "quit":
+        print(eval(string))
+        string = input("")
+
+run()
