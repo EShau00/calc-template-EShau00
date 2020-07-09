@@ -82,7 +82,6 @@ def run():
         print(f"Output: {eval(string)}\n")
         string = input("Input: ")
 
-    print("Welcome to Eric and Alejandro's 4-function calculator!")
     print("We hope you enjoyed your stay!")
 
 
