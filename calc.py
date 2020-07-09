@@ -76,9 +76,14 @@ def eval(string):
 def run():
     print("Welcome to Eric and Alejandro's 4-function calculator!")
     print("Enter \"quit\" to quit at any time.\n")
-    string = input("")
+    string = input("Input: ")
+
     while string != "quit":
-        print(eval(string))
-        string = input("")
+        print("Output: {eval(string)}\n")
+        string = input("Input: ")
+
+    print("Welcome to Eric and Alejandro's 4-function calculator!")
+    print("We hope you enjoyed your stay!")
+
 
 run()
